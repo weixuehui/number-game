@@ -1,0 +1,16 @@
+function game(num,guess){
+	var min;
+	var arr = num.toString().split("");
+	arr.sort();
+	var i = 0;
+	while(arr[i] == '0'){
+		i++;
+	}
+	min = arr.splice(i,1);
+	min = min.concat(arr).join('');
+	if(min == guess){
+		return "YES";
+	}else{
+		return "NO";
+	}
+}
